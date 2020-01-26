@@ -15,6 +15,8 @@
 		860C374123DC93CD00E97DDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860C373F23DC93CD00E97DDE /* LaunchScreen.storyboard */; };
 		860C374C23DC93CD00E97DDE /* KotlinIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C374B23DC93CD00E97DDE /* KotlinIOSTests.swift */; };
 		860C375723DC93CD00E97DDE /* KotlinIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C375623DC93CD00E97DDE /* KotlinIOSUITests.swift */; };
+		860C376E23DC9BDC00E97DDE /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860C376D23DC9BDC00E97DDE /* SharedCode.framework */; };
+		860C376F23DC9BDC00E97DDE /* SharedCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 860C376D23DC9BDC00E97DDE /* SharedCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		860C377023DC9BDC00E97DDE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				860C376F23DC9BDC00E97DDE /* SharedCode.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		860C373123DC93C900E97DDE /* KotlinIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotlinIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		860C373423DC93C900E97DDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,9 @@
 		860C375223DC93CD00E97DDE /* KotlinIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KotlinIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		860C375623DC93CD00E97DDE /* KotlinIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KotlinIOSUITests.swift; sourceTree = "<group>"; };
 		860C375823DC93CD00E97DDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		860C376523DC9B0200E97DDE /* xcode-frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "xcode-frameworks"; path = "../../AndroidStudioProjects/ForLearning/MyApplication/SharedCode/build/xcode-frameworks"; sourceTree = "<group>"; };
+		860C376623DC9B3200E97DDE /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		860C376D23DC9BDC00E97DDE /* SharedCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharedCode.framework; path = "../../AndroidStudioProjects/ForLearning/MyApplication/SharedCode/build/xcode-frameworks/SharedCode.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860C376E23DC9BDC00E97DDE /* SharedCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +103,7 @@
 				860C374A23DC93CD00E97DDE /* KotlinIOSTests */,
 				860C375523DC93CD00E97DDE /* KotlinIOSUITests */,
 				860C373223DC93C900E97DDE /* Products */,
+				860C376423DC9B0200E97DDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +157,16 @@
 			path = KotlinIOSUITests;
 			sourceTree = "<group>";
 		};
+		860C376423DC9B0200E97DDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				860C376D23DC9BDC00E97DDE /* SharedCode.framework */,
+				860C376623DC9B3200E97DDE /* XcodeKit.framework */,
+				860C376523DC9B0200E97DDE /* xcode-frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 860C375B23DC93CD00E97DDE /* Build configuration list for PBXNativeTarget "KotlinIOS" */;
 			buildPhases = (
+				860C377123DC9D1200E97DDE /* ShellScript */,
 				860C372D23DC93C900E97DDE /* Sources */,
 				860C372E23DC93C900E97DDE /* Frameworks */,
 				860C372F23DC93C900E97DDE /* Resources */,
+				860C377023DC9BDC00E97DDE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +294,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		860C377123DC9D1200E97DDE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd \"/Users/brijq/Desktop/Projects/AndroidStudioProjects/ForLearning/MyApplication/SharedCode/build/xcode-frameworks\"\n./gradlew :SharedCode:packForXCode -PXCODE_CONFIGURATION=${CONFIGURATION}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		860C372D23DC93C900E97DDE /* Sources */ = {
@@ -435,8 +488,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"KotlinIOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "../../AndroidStudioProjects/ForLearning/MyApplication/SharedCode/build/xcode-frameworks KotlinIOS/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/brijq/Desktop/Projects/AndroidStudioProjects/ForLearning/MyApplication/SharedCode/build/xcode-frameworks";
 				INFOPLIST_FILE = KotlinIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,8 +508,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"KotlinIOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "../../AndroidStudioProjects/ForLearning/MyApplication/SharedCode/build/xcode-frameworks KotlinIOS/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/brijq/Desktop/Projects/AndroidStudioProjects/ForLearning/MyApplication/SharedCode/build/xcode-frameworks";
 				INFOPLIST_FILE = KotlinIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

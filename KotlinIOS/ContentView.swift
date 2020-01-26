@@ -7,10 +7,11 @@
 //
 
 import SwiftUI
+import SharedCode
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        Text(CommonKt.createApplicationScreenMessage())
     }
 }
 
@@ -19,3 +20,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
